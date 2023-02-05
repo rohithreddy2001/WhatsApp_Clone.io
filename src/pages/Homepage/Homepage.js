@@ -20,6 +20,7 @@ import lock from '../Homepage/lock.png'
 
 const Homepage =()=>{
 
+    
     const chats =[
         {
             id_:0,
@@ -112,6 +113,30 @@ const Homepage =()=>{
         setCurrentData(data)
         console.log(data)
     }
+
+    // const [search,setSearch] = useState('')
+
+    // const handleChange = (e) => {
+    //     setSearch(e.target.value)
+    // }
+
+    // const filteredPersons = chats.filter(
+    //     person => {
+    //       return (
+    //         person
+    //         .name_
+    //         .toLowerCase()
+    //         .includes(search.toLowerCase()) ||
+    //         person
+    //         .time_
+    //         .toLowerCase()
+    //         .includes(search.toLowerCase())
+    //       );
+    //     }
+    //   );
+
+
+
  
     return(
         <div className={classes.ctn}>
@@ -133,7 +158,12 @@ const Homepage =()=>{
                 </div>
                 <div className={classes.bottom}>
                     <div className={classes.i_ctn}>
-                        <input type="text" className={classes.i_field} placeholder="Search or start new chat"/>
+                        <input 
+                            type="text" 
+                            className={classes.i_field} 
+                            placeholder="Search or start new chat"
+                            // onChange={handleChange}
+                             />
                         <img src={search_icon} alt="icon not found" className={classes.icn}></img>
                     </div>
                     <div className={classes.contact_ctn}>
@@ -146,6 +176,7 @@ const Homepage =()=>{
             <div className={classes.right}>
                 <ChatDetails data={currentData}/>
             </div>
+            {/* {filteredPersons} */}
         </div>
     )
 }
