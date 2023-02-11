@@ -17,8 +17,24 @@ import chat from '../Homepage/chat.png'
 import status from '../Homepage/status.png'
 import users from '../Homepage/users.png'
 import lock from '../Homepage/lock.png'
+import Lock from './Lock'
 
 const Homepage =()=>{
+
+    const [whatsAppLock,setWhatsAppLock] = useState(false)
+
+    const lockHandler = () => {
+        console.log("WhatsApp Locked")
+        setWhatsAppLock(!whatsAppLock)
+
+    }
+
+    // const [unLock,setUnLock] = useState(false)
+
+    const unLockHandler = () => {
+        console.log("unlock")
+        setWhatsAppLock(!whatsAppLock)
+    }
 
     
     const chats =[
@@ -114,6 +130,7 @@ const Homepage =()=>{
         console.log(data)
     }
 
+
     // const [search,setSearch] = useState('')
 
     // const handleChange = (e) => {
@@ -140,6 +157,9 @@ const Homepage =()=>{
  
     return(
         <div className={classes.ctn}>
+            {
+                whatsAppLock && <Lock unLockHandler={unLockHandler}/>
+            }
             <div className={classes.left}>
                 <div className={classes.top}>
                     <div className={classes.t_left}>
@@ -148,7 +168,7 @@ const Homepage =()=>{
                     </div>
                     <div className={classes.t_right}>
                         {/* <button className={classes.filter}>Filter</button> */}
-                        <img src={lock} className={classes.lock}></img>
+                        <img src={lock} className={classes.lock} onClick={lockHandler}></img>
                         <img src={users} className={classes.users}></img>
                         <img src={status} className={classes.status}></img>
                         <img src={chat} className={classes.chat}></img>

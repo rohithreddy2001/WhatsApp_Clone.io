@@ -151,3 +151,67 @@
 .icn:hover {
     transform: scale(1.2);
 }
+.lock_ctn {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    backdrop-filter: blur(10px);
+
+    /* background-color: grey; */
+}
+.Lock_ctn {
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: lighter;
+    padding-bottom: 10px;
+    /* background-color: aqua; */
+}
+.unlock_ctn {
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    /* background-color: blue; */
+    padding-top: 10px;
+}
+.lockInput_ctn {
+    width: 250px;
+    height: 40px;
+    border: none;
+    border-radius: 50px;
+    font-size: 20px;
+    padding: 15px;
+    text-align: center;
+}
+.lockInput_ctn:focus {
+    outline: none;
+}
+.lock_img,.Enter_img {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    position: absolute;
+    margin-top: 5px;
+    margin-right: 190px;
+}
+
+.lock_img:hover,.Enter_img:hover {
+    transform: scale(1.1);
+
+}
+
+.Enter_img {
+    margin-left: 400px;
+}
