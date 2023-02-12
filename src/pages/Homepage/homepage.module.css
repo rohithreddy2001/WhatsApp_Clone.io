@@ -156,35 +156,38 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     backdrop-filter: blur(10px);
+    gap: 10px;
 
     /* background-color: grey; */
 }
 .Lock_ctn {
-    height: 50vh;
+    height: 10vh;
     width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     gap: 10px;
     color: rgb(255, 255, 255);
     font-size: 20px;
     font-weight: lighter;
-    padding-bottom: 10px;
+    /* padding-bottom: 10px; */
     /* background-color: aqua; */
 }
 .unlock_ctn {
-    height: 50vh;
+    height: 10vh;
     width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     gap: 10px;
-    /* background-color: blue; */
-    padding-top: 10px;
+    /* background-color: rgb(50, 131, 108); */
+    /* padding-top: 10px; */
 }
 .lockInput_ctn {
     width: 250px;
@@ -208,10 +211,34 @@
 }
 
 .lock_img:hover,.Enter_img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 
 }
 
 .Enter_img {
     margin-left: 400px;
+}
+
+.Logging {
+    
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /* background-color: blue; */
+    
+}
+.logout {
+    color: rgb(162, 34, 37);
+    cursor: pointer;
+}
+.forgot {
+    color: rgb(137, 143, 146);
+    cursor: pointer;
+}
+.logout:hover , .forgot:hover {
+    transform: scale(1.03);
 }

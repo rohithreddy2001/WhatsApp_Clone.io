@@ -135,7 +135,9 @@
     border: none;
     border-radius: 10px;
     color: white;
-    font-size: 20px;
+    font-size: 15px;
+    font-weight: 100;
+    font-family: sans-serif;
     background-color: rgb(42, 57, 66);
 }
 .input_field:focus {

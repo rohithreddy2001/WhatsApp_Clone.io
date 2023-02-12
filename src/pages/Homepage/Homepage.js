@@ -21,19 +21,33 @@ import Lock from './Lock'
 
 const Homepage =()=>{
 
-    const [whatsAppLock,setWhatsAppLock] = useState(false)
+    const [whatsAppLock,setWhatsAppLock] = useState(true)
 
-    const lockHandler = () => {
-        console.log("WhatsApp Locked")
-        setWhatsAppLock(!whatsAppLock)
+    const [unLock,setUnLock] = useState('')
 
+    const passwordHandler = (event) => {
+        setUnLock(event.target.value)
+        event.preventDefault()
     }
 
-    // const [unLock,setUnLock] = useState(false)
-
-    const unLockHandler = () => {
-        console.log("unlock")
+    const lockHandler = (e) => {
+        console.log("WhatsApp Locked")
         setWhatsAppLock(!whatsAppLock)
+        e.preventDefault();
+    }
+
+    let Pass = "1234"
+    const unLockHandler = (e) => {
+        console.log("unlock")
+        if(Pass === unLock) {
+            setWhatsAppLock(!whatsAppLock)
+            setUnLock('')
+        }
+        else {
+            setWhatsAppLock(whatsAppLock)
+            setUnLock('')        
+        }
+        e.preventDefault();
     }
 
     
@@ -158,7 +172,7 @@ const Homepage =()=>{
     return(
         <div className={classes.ctn}>
             {
-                whatsAppLock && <Lock unLockHandler={unLockHandler}/>
+                whatsAppLock && <Lock unLockHandler={unLockHandler} unLock={unLock} passwordHandler={passwordHandler}/>
             }
             <div className={classes.left}>
                 <div className={classes.top}>
