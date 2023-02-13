@@ -25,7 +25,7 @@ function Lock({unLockHandler,unLock,passwordHandler}) {
             required>  
           </input>
           <img src={lock_red} className={classes.lock_img}></img>
-          <img src={Enter} className={classes.Enter_img} onClick={unLockHandler}></img>
+          <img src={Enter} type="submit" className={classes.Enter_img} onClick={unLockHandler}></img>
         </div>
         <div className={classes.Logging}>
           <h3 className={classes.logout}>Logout</h3>
