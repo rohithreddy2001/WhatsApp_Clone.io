@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import classes from './homepage.module.css'
 import unlock from '../Homepage/unlock.png'
 import lock_red from '../Homepage/lock_red.png'
-import profile_pic from '../Homepage/my_pic.jpg'
+import dp from '../Homepage/profile.jpg'
 import Enter from '../Homepage/Enter.png'
 
 function Lock({unLockHandler,unLock,passwordHandler}) {
@@ -12,7 +12,7 @@ function Lock({unLockHandler,unLock,passwordHandler}) {
     <div className={classes.lock_ctn}>
       <form className={classes.lock_ctn}>
         <div className={classes.Lock_ctn}>
-        <img src={profile_pic} className={classes.pic}></img>
+        <img src={dp} className={classes.pic}></img>
         </div>
         <div className={classes.unlock_ctn}>
           <input 

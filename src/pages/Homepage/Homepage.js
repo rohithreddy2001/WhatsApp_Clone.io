@@ -1,7 +1,9 @@
 
 
 import classes from './homepage.module.css'
+import SearchItem from '../SearchItem'
 import profile_pic from '../Homepage/my_pic.jpg'
+import dp from '../Homepage/profile.jpg'
 import search_icon from '../Homepage/search_icon.png'
 import ChatItem from '../../components/ChatItem/ChatItem'
 import { useState } from 'react'
@@ -19,7 +21,10 @@ import users from '../Homepage/users.png'
 import lock from '../Homepage/lock.png'
 import Lock from './Lock'
 
+
 const Homepage =()=>{
+
+    const [search, setSearch] = useState('')
 
     const [whatsAppLock,setWhatsAppLock] = useState(true)
 
@@ -124,7 +129,30 @@ const Homepage =()=>{
             time_:"01:23",
             img_:my_pic2
         },
-        
+        {
+            id_:2,
+            name_:"rr",
+            time_:"10:24",
+            img_:my_pic3
+        },
+        {
+            id_:3,
+            name_:"ro",
+            time_:"02:24",
+            img_:my_pic4
+        },
+        {
+            id_:4,
+            name_:"rrr",
+            time_:"01:23",
+            img_:my_pic2
+        },
+        {
+            id_:1,
+            name_:"Bablu",
+            time_:"01:24",
+            img_:my_pic2
+        },
         
     ]
 
@@ -165,7 +193,7 @@ const Homepage =()=>{
     //       );
     //     }
     //   );
-
+    
 
 
  
@@ -177,7 +205,7 @@ const Homepage =()=>{
             <div className={classes.left}>
                 <div className={classes.top}>
                     <div className={classes.t_left}>
-                        <img src={profile_pic} className={classes.pic}></img>
+                        <img src={dp} className={classes.pic}></img>
                         <h2 className={classes.heading}>Chats</h2>
                     </div>
                     <div className={classes.t_right}>
@@ -191,7 +219,13 @@ const Homepage =()=>{
                     </div>
                 </div>
                 <div className={classes.bottom}>
-                    <div className={classes.i_ctn}>
+
+                    <SearchItem
+                        search={search}
+                        setSearch={setSearch}
+                        chats={chats.name_}
+                    />
+                    {/* <div className={classes.i_ctn}>
                         <input 
                             type="text" 
                             className={classes.i_field} 
@@ -199,7 +233,7 @@ const Homepage =()=>{
                             // onChange={handleChange}
                              />
                         <img src={search_icon} alt="icon not found" className={classes.icn}></img>
-                    </div>
+                    </div> */}
                     <div className={classes.contact_ctn}>
                         {
                             chats.map(item=><ChatItem props={item} toggleChatData={toggleChatData}/>)

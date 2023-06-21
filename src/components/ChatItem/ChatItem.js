@@ -5,7 +5,7 @@
 import classes from './chat_item.module.css'
 import pic from '../ChatItem/pic.jpeg'
 
-const ChatItem =(props)=>{
+const ChatItem =(props)=> {
     console.log(props)
     function setChatDetails() {
         props.toggleChatData([
